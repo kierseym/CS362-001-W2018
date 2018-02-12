@@ -119,7 +119,7 @@ public class Appt implements  Comparable<Appt>{
         		this.valid=false;
         	else
             {
-                startMinute = startMinute+2;
+   //             startMinute = startMinute+2;
             	if(startDay<1 || startDay>NumDaysInMonth)
             		this.valid=false;
             	else
