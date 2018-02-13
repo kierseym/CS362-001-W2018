@@ -50,15 +50,14 @@ public class CalDayTest {
     //test toString
     @Test
     public void test03() throws Throwable {
-        Calendar rightnow = Calendar.getInstance();
-        int thisMonth = rightnow.get(Calendar.MONTH)+1;
-        int thisYear = rightnow.get(Calendar.YEAR);
-        int thisDay = rightnow.get(Calendar.DAY_OF_MONTH);
+        int thisMonth = 2;
+        int thisYear = 2018; 
+        int thisDay = 12;
         GregorianCalendar today = new GregorianCalendar(thisYear, thisMonth, thisDay);
         CalDay day = new CalDay(today); 
          
         StringBuilder sb = new StringBuilder();
-        String date = "2/11/2018";
+        String date = "2/12/2018";
         sb.append("\t --- " + date + " --- \n");
         sb.append(" --- -------- Appointments ------------ --- \n");
         Appt test = new Appt(10, 20, 28, thisMonth, thisYear, "test", "des");
@@ -140,7 +139,12 @@ public class CalDayTest {
         calday.addAppt(test);
         calday.addAppt(test2);
         Iterator<?> iterator = calday.getAppts().iterator();
-        //assertEquals(iterator, calday.getAppts().iterator());
+        assertEquals(iterator, iterator);
+        CalDay badDay = new CalDay();
+        assertEquals(null, badDay.iterator());
+        CalDay calday2 = new CalDay(today);
+        LinkedList<Appt> temp = new LinkedList<Appt>();
+        assertEquals(temp, calday2.getAppts());
     }
 
     @Test
@@ -161,8 +165,23 @@ public class CalDayTest {
         temp = tt.deleteAppt(appts, appt2);
         appts.remove(appt2);
         assertEquals(temp, null);
-        
-        
+    }
+
+    @Test
+    public void test09() throws Throwable {
+        int month = 3;  
+        int day = 10;   
+        int year = 2018;
+        GregorianCalendar today = new GregorianCalendar(year, month, day);
+        CalDay calday = new CalDay(today);
+        Appt appt = new Appt(10, 20, 3, 10, 2018, "titile", "des");
+        Appt appt2 = new Appt(20, 10, 3, 10, 2018, "title", "des");
+        calday.addAppt(appt2);
+        calday.addAppt(appt);
+        LinkedList<Appt> temp = new LinkedList<Appt>();
+        temp.add(appt);
+        temp.add(appt2);
+        assertEquals(temp, calday.getAppts());
     }
 //add more unit tests as you needed	
 }

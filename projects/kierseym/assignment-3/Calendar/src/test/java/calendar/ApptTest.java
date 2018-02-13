@@ -35,7 +35,12 @@ public class ApptTest {
 		 assertEquals(01, appt.getStartMonth());
 		 assertEquals(2018, appt.getStartYear());
 		 assertEquals("Birthday Party", appt.getTitle());
-		 assertEquals("This is my birthday party.", appt.getDescription());         		
+		 assertEquals("This is my birthday party.", appt.getDescription());	
+         int[] recuring = new int[0]; 
+         assertEquals(2, appt.getRecurBy());
+         assertEquals(0, appt.getRecurIncrement());
+         assertEquals(0, appt.getRecurNumber());
+
 	 }
     //test the tostring function works
 	 @Test
@@ -179,7 +184,9 @@ public class ApptTest {
             else
                 assertTrue(test.getValid());
         }
-
+        Appt appt = new Appt(10, 10, 2, 11, 2018, "test", "test");
+        appt.setStartMonth(4);
+        assertEquals(4, appt.getStartMonth());
     }
 
     @Test
