@@ -44,7 +44,7 @@ public class CalDayRandomTest {
 			 CalDay calday = new CalDay(today);
 			 return calday;
 		 }
-/*
+
 	 @Test
 	  public void addApptTest()  throws Throwable  {
 			long startTime = Calendar.getInstance().getTimeInMillis();
@@ -69,7 +69,7 @@ public class CalDayRandomTest {
 
 			}
 
-	 }*/
+	 }
 
 
 
