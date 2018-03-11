@@ -1,0 +1,51 @@
+Bug 1:
+  Unique ID: missingException, line 36 of TimeTable
+  My test that catches the DateOutOfRangeException when it should be thrown was failing. The cause was the if statement that checked the dates and throws the exception had been taken out.
+  Code that will always show this bug:
+    Calendar rightnow = Calendar.getInstance();
+    int thisMonth = rightnow.get(Calendar.MONTH)+1;
+    int thisYear = rightnow.get(Calendar.YEAR);
+    int thisDay = rightnow.get(Calendar.DAY_OF_MONTH);
+    GregorianCalendar today = new GregorianCalendar(thisYear, thisMonth, thisDay);
+    GregorianCalendar next = new GregorianCalendar(thisYear, thisMonth, 30);
+    TimeTable timetable = new TimeTable();
+    LinkedList<CalDay> caldays = new LinkedList<CalDay>();
+    LinkedList<Appt> appts = new LinkedList<Appt>();
+    caldays = timetable.getApptRange(appts, next, today);
+  Severity of bug: If this bug is not fixed the rest of the code will be executed without checking if the first date is before the second and will produce other errors that will make the code not functions correctly.
+
+Bug 2:
+  Unique ID: notSorting, line 75 of CalDay
+  Mulitple of my tests check that each new appt is added in the correct chronological order. When the tests check that the list of appts is as expected, they aren ot in the right order.
+  Code that will alwasys show this bug:
+    Calendar rightnow = Calendar.getInstance();
+    int thisMonth = rightnow.get(Calendar.MONTH)+1;
+    int thisYear = rightnow.get(Calendar.YEAR);
+    int thisDay = rightnow.get(Calendar.DAY_OF_MONTH);
+    GregorianCalendar today = new GregorianCalendar(thisYear, thisMonth, thisDay);
+    CalDay day = new CalDay(today);
+
+    Appt test = new Appt(90, 20, 90, 11, 2018, "title", "des");
+    day.addAppt(test);
+    Appt first = new Appt(2, 30, 28, thisMonth, thisYear, "title", "des");
+    Appt second = new Appt(8, 20, 28, thisMonth, thisYear, "title", "des");
+    Appt third = new Appt(14, 10, 28, thisMonth, thisYear, "title", "des");
+    day.addAppt(first);
+    day.addAppt(third);
+    day.addAppt(second);
+    LinkedList<Appt> testList = new LinkedList<Appt>();
+    testList.add(first);
+    testList.add(second);
+    testList.add(third);
+    assertEquals(testList, day.getAppts());
+
+    This code will always throw an error because the appts are not in the right order.
+  Severity of bug: The appts will not be in the right order, therefore the user will see them in the wrong order.
+
+Bug 3:
+  Unique ID: subtract1, line 113 of Appt
+  My random tests threw an ArrayIndexOutOfBoundException because the index that was given to isValid was 12, which is not a valid month because the month index starts at 0 not 1. This was caused by deleted the subtract 1 from the index of the month.
+  Code that will always show this bug:
+    Appt appt = new Appt(3, 20, 2, 12, 2018, "Title", "description");
+  Severity of bug: Appointments for the month of December will never be able to be added because they will always be invalid.
+  
