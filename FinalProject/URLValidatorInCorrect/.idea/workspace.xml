@@ -70,8 +70,8 @@
       <file leaf-file-name="UrlValidatorTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/finalprojectB/UrlValidatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="67" column="54" lean-forward="false" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
+            <state relative-caret-position="357">
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,7 +189,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UrlValidatorTest.testYourFirstPartition">
+  <component name="RunManager" selected="JUnit.UrlValidatorTest.testYourSecondPartition">
     <configuration name="Execute" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -430,10 +430,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testYourFirstPartition" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testYourSecondPartition" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testIsValid" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testYourSecondPartition" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testYourFirstPartition" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testIsValid" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testManualTest" />
       </list>
     </recent_temporary>
@@ -452,20 +452,11 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UrlValidatorTest_testYourFirstPartition - 2018.03.15 at 14h 00m 30s.xml">
-      <configuration name="UrlValidatorTest.testYourFirstPartition" configurationId="JUnit" />
+    <history-entry file="UrlValidatorTest - 2018.03.16 at 13h 22m 52s.xml">
+      <configuration name="UrlValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UrlValidatorTest_testYourFirstPartition - 2018.03.15 at 14h 01m 29s.xml">
-      <configuration name="UrlValidatorTest.testYourFirstPartition" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UrlValidatorTest_testYourFirstPartition - 2018.03.15 at 14h 01m 59s.xml">
-      <configuration name="UrlValidatorTest.testYourFirstPartition" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UrlValidatorTest_testYourFirstPartition - 2018.03.15 at 14h 02m 20s.xml">
-      <configuration name="UrlValidatorTest.testYourFirstPartition" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UrlValidatorTest_testYourFirstPartition - 2018.03.15 at 14h 03m 00s.xml">
-      <configuration name="UrlValidatorTest.testYourFirstPartition" configurationId="JUnit" />
+    <history-entry file="UrlValidatorTest - 2018.03.16 at 13h 59m 24s.xml">
+      <configuration name="UrlValidatorTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="UrlValidatorTest_testYourFirstPartition - 2018.03.15 at 14h 04m 30s.xml">
       <configuration name="UrlValidatorTest.testYourFirstPartition" configurationId="JUnit" />
@@ -481,6 +472,15 @@
     </history-entry>
     <history-entry file="UrlValidatorTest_testYourFirstPartition - 2018.03.15 at 14h 07m 24s.xml">
       <configuration name="UrlValidatorTest.testYourFirstPartition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UrlValidatorTest_testYourFirstPartition - 2018.03.16 at 13h 32m 54s.xml">
+      <configuration name="UrlValidatorTest.testYourFirstPartition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UrlValidatorTest_testYourSecondPartition - 2018.03.16 at 14h 01m 09s.xml">
+      <configuration name="UrlValidatorTest.testYourSecondPartition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UrlValidatorTest_testYourSecondPartition - 2018.03.16 at 14h 01m 36s.xml">
+      <configuration name="UrlValidatorTest.testYourSecondPartition" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -537,8 +537,16 @@
           </properties>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/finalprojectB/UrlValidatorTest.java</url>
+          <line>63</line>
+          <properties class="finalprojectB.UrlValidatorTest" method="testYourSecondPartition">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -585,8 +593,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/finalprojectB/UrlValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="67" column="54" lean-forward="false" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
+        <state relative-caret-position="357">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

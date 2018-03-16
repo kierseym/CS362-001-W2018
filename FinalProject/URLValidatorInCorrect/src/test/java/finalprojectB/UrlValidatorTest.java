@@ -45,7 +45,7 @@ public class UrlValidatorTest extends TestCase {
       //You can use this function to implement your manual testing
       UrlValidator url = new UrlValidator(null, null, 1 );
       assertTrue(url.isValid("http://google.com"));
-      assertTrue(url.isValid("://:65a/test1//file"));
+      assertFalse(url.isValid("://:65a/test1//file"));
 
 
 	   
@@ -58,14 +58,14 @@ public class UrlValidatorTest extends TestCase {
       UrlValidator url = new UrlValidator(null, null, 1 );
       assertTrue(url.isValid("http://google.com"));
       assertTrue(url.isValid("http://facebook.com"));
-      assertTrue(url.isValid("GOOGLE.COM"));
+      assertTrue(url.isValid("HTTP://GOOGLE.COM"));
    }
    
    public void testYourSecondPartition(){
 		 //Partition that is invalid
       UrlValidator url = new UrlValidator(null, null, 1 );
       assertFalse(url.isValid("asdgarh"));
-      assertFalse(url.isValid(("http://google.com/http")));
+      assertTrue(url.isValid(("file/test")));
 
    }
    //You need to create more test cases for your Partitions if you need to 
